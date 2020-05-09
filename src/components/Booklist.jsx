@@ -18,7 +18,7 @@ const Booklist = props => {
                 <li key={index}>
                     <b>{x.volumeInfo.title}</b> <br></br>
                        {x.volumeInfo.authors}<br></br>
-                    <img src={x.volumeInfo.imageLinks.thumbnail}></img>
+                    {/* <img src={x.volumeInfo.imageLinks.thumbnail}></img> */}
                 </li>
                 )      
             }
