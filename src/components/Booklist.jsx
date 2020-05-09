@@ -15,11 +15,11 @@ const Booklist = props => {
                 : bookData.data.items.map
                 (
                     (x, index) => 
-                <li key={index}>
+                <p key={index}>
                     <b>{x.volumeInfo.title}</b> <br></br>
-                       {x.volumeInfo.authors}<br></br>
-                    {/* <img src={x.volumeInfo.imageLinks.thumbnail}></img> */}
-                </li>
+                    <img src={x.volumeInfo.imageLinks.thumbnail}></img>
+                    {x.volumeInfo.authors}/{x.volumeInfo.publishedDate}<br></br>
+                </p>
                 )      
             }
             </ul>
