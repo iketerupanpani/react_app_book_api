@@ -2,6 +2,7 @@ import React from 'react';
 import Booklist from './components/Booklist';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+import './index.css';
 
 const App = () => {
   const languages = ['React', 'Vue', 'Angular'];
@@ -13,7 +14,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <h1>BOOKS API</h1>
+        <h1>本のラインナップ</h1>
         <ul>
           <li><Link to='/'>React</Link></li>
           <li><Link to='/vue'>Vue</Link></li>
