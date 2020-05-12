@@ -2,7 +2,6 @@ import React from 'react';
 import Booklist from './components/Booklist';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import './index.css';
 
 const App = () => {
   const languages = ['React', 'Vue', 'Angular'];
@@ -14,11 +13,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <h1>本のラインナップ</h1>
+        <h1>React google Books api</h1>
+        {/* <input type="text" placeholder="探したい本のタイトル" style={{backgroundColor: 'pink'}}/>
+        <button type="button" style={{color: 'pink'}}>search</button> */}
         <ul>
-          <li><Link to='/'>React</Link></li>
-          <li><Link to='/vue'>Vue</Link></li>
-          <li><Link to='/angular'>Angular</Link></li>
+          <li style={{color: 'pink'}}><Link to='/'>React</Link></li>
+          <li style={{color: 'pink'}}><Link to='/vue'>Vue</Link></li>
+          <li style={{color: 'pink'}}><Link to='/angular'>Angular</Link></li>
         </ul>
         <hr />
         <Route 
