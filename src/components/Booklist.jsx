@@ -24,10 +24,10 @@ const Booklist = props => {
 
                     {/* 三項演算子でvueのundefinedを処理 */}
                     {x.volumeInfo.imageLinks === undefined
-                        ? <a href={x.volumeInfo.infoLink}>
+                        ? <a href={x.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
                           <img src='/No_picture_available.png' alt={x.volumeInfo.title} width="120" height="150" border="1px solid"></img>
                           </a>
-                        : <a href={x.volumeInfo.infoLink}>
+                        : <a href={x.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
                           <img src={x.volumeInfo.imageLinks.thumbnail} alt={x.volumeInfo.title}></img>
                           </a>
                     }
