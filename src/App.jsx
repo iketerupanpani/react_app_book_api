@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const App = () => {
-  const languages = ['React', 'Vue', 'Angular'];
+  const languages = ['React', 'Vue', 'Angular','netflix'];
   const getDataFromAPI = async keyword => {
     const requestUrl = 'https://www.googleapis.com/books/v1/volumes?q=intitle:'
     const result = await axios.get(`${requestUrl}${keyword}`);
@@ -18,6 +18,7 @@ const App = () => {
           <li style={{color: 'pink'}}><Link to='/'>React</Link></li>
           <li style={{color: 'pink'}}><Link to='/vue'>Vue</Link></li>
           <li style={{color: 'pink'}}><Link to='/angular'>Angular</Link></li>
+          <li style={{color: 'pink'}}><Link to='/netflix'>Netflix</Link></li>
         </ul>
         <hr />
         <Route 
@@ -44,6 +45,15 @@ const App = () => {
           render = 
             {props => 
               <Booklist language = {languages[2]} 
+              getData = {keyword => getDataFromAPI(keyword)} //getDataという名前で関数を渡す        
+              />
+          }
+        /> 
+        <Route 
+          path='/netflix' 
+          render = 
+            {props => 
+              <Booklist language = {languages[3]} 
               getData = {keyword => getDataFromAPI(keyword)} //getDataという名前で関数を渡す        
               />
           }
