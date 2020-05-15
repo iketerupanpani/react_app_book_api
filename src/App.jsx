@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <h1>BOOKS</h1>
+        <h1 style={{margin : 30 + "px"}}>BOOKS</h1>
         {/* <input type="text" placeholder="探したい本のタイトル" style={{backgroundColor: 'pink'}}/>
         <button type="button" style={{color: 'pink'}}>search</button> */}
         <ul>
