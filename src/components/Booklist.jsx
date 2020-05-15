@@ -16,11 +16,16 @@ const Booklist = props => {
                 (
                     (x, index) => 
                 <p key={index}>
-                    <b>{x.volumeInfo.title}</b>&emsp;<span style={{color: '#007700'}}>{x.volumeInfo.authors}</span>&ensp;{x.volumeInfo.publishedDate}<br></br>
+                    <b>{x.volumeInfo.title}</b>
+                    &emsp;
+                         <span style={{color: '#007700'}}>{x.volumeInfo.authors}</span>
+                    &ensp;
+                        {x.volumeInfo.publishedDate}<br></br>
+
                     {/* 三項演算子でvueのundefinedを処理 */}
                     {x.volumeInfo.imageLinks === undefined
                         ? <a href={x.volumeInfo.infoLink}>
-                          <img src='/No_picture_available.png' alt={x.volumeInfo.title} width="120" height="150"　border="1px solid"></img>
+                          <img src='/No_picture_available.png' alt={x.volumeInfo.title} width="120" height="150" border="1px solid"></img>
                           </a>
                         : <a href={x.volumeInfo.infoLink}>
                           <img src={x.volumeInfo.imageLinks.thumbnail} alt={x.volumeInfo.title}></img>
