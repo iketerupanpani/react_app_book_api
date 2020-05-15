@@ -18,11 +18,12 @@ const Booklist = props => {
                 <p key={index}>
                     <b>{x.volumeInfo.title}</b> <br></br>
                     
-                    {x.volumeInfo.imageLinks.thumbnail === undefined
-                        ? <p style={{color: 'pink'}}>{x.volumeInfo.title}</p>
+                    {x.volumeInfo.imageLinks === undefined
+                        ? <p>undefined...</p>
                         : <a href={x.volumeInfo.infoLink}>
-                         <img src={x.volumeInfo.imageLinks.thumbnail} alt={x.volumeInfo.title}></img>
-                    </a>}
+                          <img src={x.volumeInfo.imageLinks.thumbnail} alt={x.volumeInfo.title}></img>
+                          </a>
+                    }
                     {x.volumeInfo.authors}/{x.volumeInfo.publishedDate}
                 </p>
                 )      
