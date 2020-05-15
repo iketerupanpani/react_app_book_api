@@ -17,7 +17,7 @@ const Booklist = props => {
                     (x, index) => 
                 <p key={index}>
                     <b>{x.volumeInfo.title}</b> <br></br>
-                    
+                    {/* 三項演算子でvueのundefinedを処理 */}
                     {x.volumeInfo.imageLinks === undefined
                         ? <p>undefined...</p>
                         : <a href={x.volumeInfo.infoLink}>
