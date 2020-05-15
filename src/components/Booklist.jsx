@@ -16,7 +16,7 @@ const Booklist = props => {
                 (
                     (x, index) => 
                 <p key={index}>
-                    <b>{x.volumeInfo.title}</b> <br></br>
+                    <b>{x.volumeInfo.title}</b> ・{x.volumeInfo.authors}・{x.volumeInfo.publishedDate}<br></br>
                     {/* 三項演算子でvueのundefinedを処理 */}
                     {x.volumeInfo.imageLinks === undefined
                         ? <a href={x.volumeInfo.infoLink}>
@@ -26,7 +26,7 @@ const Booklist = props => {
                           <img src={x.volumeInfo.imageLinks.thumbnail} alt={x.volumeInfo.title}></img>
                           </a>
                     }
-                    {x.volumeInfo.authors}/{x.volumeInfo.publishedDate}
+                   
                 </p>
                 )      
             }
