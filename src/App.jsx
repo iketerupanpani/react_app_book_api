@@ -14,8 +14,6 @@ const App = () => {
     <BrowserRouter>
       <div>
         <h1 style={{margin : 20 + "px"}}>BOOKS</h1>
-        {/* <input type="text" placeholder="探したい本のタイトル" style={{backgroundColor: 'pink'}}/>
-        <button type="button" style={{color: 'pink'}}>search</button> */}
         <ul>
           <li style={{color: 'pink'}}><Link to='/'>React</Link></li>
           <li style={{color: 'pink'}}><Link to='/vue'>Vue</Link></li>
