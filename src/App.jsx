@@ -14,12 +14,14 @@ const App = () => {
     <BrowserRouter>
       <div>
         <h1 style={{margin : 20 + "px"}}>BOOKS</h1>
-        <ul>
-          <li style={{color: 'pink'}}><Link to='/'>React</Link></li>
-          <li style={{color: 'pink'}}><Link to='/vue'>Vue</Link></li>
-          <li style={{color: 'pink'}}><Link to='/angular'>Angular</Link></li>
-          <li style={{color: 'pink'}}><Link to='/netflix'>Netflix</Link></li>
-        </ul>
+        <div style={{margin : 20 + "px"}}>
+          <button><Link to='/'>React</Link></button>
+          <button><Link to='/vue'>Vue</Link></button>
+          <button><Link to='/angular'>Angular</Link></button>
+          <button><Link to='/netflix'>Netflix</Link></button>
+          {/* <input type="text" value="" placeholder="ブックタイトル"></input>
+            <button><Link to='/result'>Search</Link></button> */}
+        </div>
         <hr />
         <Route 
           exact 
@@ -54,6 +56,15 @@ const App = () => {
           render = 
             {props => 
               <Booklist language = {languages[3]} 
+              getData = {keyword => getDataFromAPI(keyword)} //getDataという名前で関数を渡す        
+              />
+          }
+        /> 
+        <Route 
+          path='/result' 
+          render = 
+            {props => 
+              <Booklist language = {languages[4]} 
               getData = {keyword => getDataFromAPI(keyword)} //getDataという名前で関数を渡す        
               />
           }
